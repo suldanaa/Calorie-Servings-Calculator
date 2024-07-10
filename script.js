@@ -34,13 +34,11 @@ submit.addEventListener('click',()=>{
     colorAuthentication();
 
     if(decisionFlag==1){
-        console.log((desiredServing.value/servings.value)*calories.value);
         outputMessage.style.display = "contents";
         outputLetters.textContent = "It will be...";
         outputNumber.textContent = Math.trunc((desiredServing.value/servings.value)*calories.value) + " calories";
     }
     else if(decisionFlag==2){
-        console.log((desiredCalories.value/calories.value)*servings.value);
         outputMessage.style.display = "contents";
         outputLetters.textContent = "You need...";
         outputNumber.textContent = Math.trunc((desiredCalories.value/calories.value)*servings.value) + "g";
@@ -49,6 +47,22 @@ submit.addEventListener('click',()=>{
 });
 
 function colorAuthentication(){
+    if(decisionFlag==1){
+        if(desiredServing.value == ""){
+            desiredServing.style.border = "2px solid tomato";
+        }
+        else{
+            desiredServing.style.border = "1px solid black";
+        }
+    } else if(decisionFlag==2){
+        if(desiredCalories.value == ""){
+            desiredCalories.style.border = "2px solid tomato";
+        }
+        else{
+            desiredCalories.style.border = "1px solid black";
+        }
+    }
+
     if(servings.value == ""){
         servings.style.border = "2px solid tomato";
     }
@@ -61,19 +75,5 @@ function colorAuthentication(){
     }
     else{
         calories.style.border = "1px solid black";
-    }
-
-    if(desiredServing.value == ""){
-        desiredServing.style.border = "2px solid tomato";
-    }
-    else{
-        desiredServing.style.border = "1px solid black";
-    }
-
-    if(desiredCalories.value == ""){
-        desiredCalories.style.border = "2px solid tomato";
-    }
-    else{
-        desiredCalories.style.border = "1px solid black";
     }
 }
