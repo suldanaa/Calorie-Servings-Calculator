@@ -45,7 +45,8 @@
     margin-left: 95px;
 }
 
-#caloriesNum, #servings, #desiredServing, #submit, #desiredCalories{
+#caloriesNum, #servings, #desiredServing, 
+#submit, #desiredCalories{
     border: 1px solid black;
 }
 #amountPerServing{
@@ -64,7 +65,8 @@
 }
 
 
-#servingsPerBag, #servingsSize, #amountPerServing, #caloriesText, #desiredCaloriesTitle, #desiredServingTitle{
+#servingsPerBag, #servingsSize, #amountPerServing, 
+#caloriesText, #desiredCaloriesTitle, #desiredServingTitle{
     margin-left: 5px;
 }
 
@@ -128,6 +130,20 @@ margin-left: 10px;
     display: none;
 }
 
+#outputLetters{
+    text-align: center;
+    margin-top: 30px;
+}
+
+#outputNumber{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 5rem;
+}
+#outputMessage{
+    display: none;
+}
 body {
     font-family: 'Helvetica', 'Arial', sans-serif;
 }
+

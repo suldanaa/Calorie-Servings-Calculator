@@ -1,20 +1,79 @@
-const servings = document.createElement("servings");
-const calories = document.createElement("caloriesNum");
+let decisionFlag = 1;
+const servings = document.getElementById("servings");
+const calories = document.getElementById("caloriesNum");
 
-const option1 = document.getElementById("calorieForServing");
-const option2 = document.getElementById("servingForCalories")
+const button1 = document.getElementById("calorieForServing");
+const button2 = document.getElementById("servingForCalories")
 
-const finalOutput1 = document.getElementById("finalOutput1");
-const finalOutput2 = document.getElementById("finalOutput2");
-option1.addEventListener('click', ()=>{
+const desiredServing = document.getElementById("desiredServing");
+const desiredCalories = document.getElementById("desiredCalories");
+
+const submit = document.getElementById("submit");
+
+const outputMessage = document.getElementById("outputMessage");
+const outputNumber = document.getElementById("outputNumber");
+const outputLetters = document.getElementById("outputLetters");
+
+
+
+button1.addEventListener('click', ()=>{
         finalOutput1.style.display = "contents";
+        outputMessage.style.display = "none";
         finalOutput2.style.display = "none";
-        
+        decisionFlag = 1;
 })
 
-option2.addEventListener('click', ()=>{
+button2.addEventListener('click', ()=>{
     finalOutput1.style.display = "none";
     finalOutput2.style.display = "contents";
-    console.log("Hi!");
+    outputMessage.style.display = "none";
+    decisionFlag = 2;
 })
 
+submit.addEventListener('click',()=>{
+    colorAuthentication();
+
+    if(decisionFlag==1){
+        console.log((desiredServing.value/servings.value)*calories.value);
+        outputMessage.style.display = "contents";
+        outputLetters.textContent = "It will be...";
+        outputNumber.textContent = Math.trunc((desiredServing.value/servings.value)*calories.value) + " calories";
+    }
+    else if(decisionFlag==2){
+        console.log((desiredCalories.value/calories.value)*servings.value);
+        outputMessage.style.display = "contents";
+        outputLetters.textContent = "You need...";
+        outputNumber.textContent = Math.trunc((desiredCalories.value/calories.value)*servings.value) + "g";
+    }
+
+});
+
+function colorAuthentication(){
+    if(servings.value == ""){
+        servings.style.border = "2px solid tomato";
+    }
+    else{
+        servings.style.border = "1px solid black";
+    }
+
+    if(calories.value == ""){
+        calories.style.border = "2px solid tomato";
+    }
+    else{
+        calories.style.border = "1px solid black";
+    }
+
+    if(desiredServing.value == ""){
+        desiredServing.style.border = "2px solid tomato";
+    }
+    else{
+        desiredServing.style.border = "1px solid black";
+    }
+
+    if(desiredCalories.value == ""){
+        desiredCalories.style.border = "2px solid tomato";
+    }
+    else{
+        desiredCalories.style.border = "1px solid black";
+    }
+}
