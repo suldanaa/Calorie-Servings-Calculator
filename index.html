@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calorie Calculator</title>
+</head>
+<body>
+    <div id="container">
+        <div id="nutritionFactsHeader">
+            Nutrition Facts
+        </div>
+
+        <div id="thinBorder"></div>
+
+        <div id="servingsPerBag">
+            16 Servings per container
+        </div>
+
+        <div id="servingsSize">
+            <div> Serving size (g)</div>
+            <input type="text" id="servings">
+        </div>
+
+        <div id="thickBorder" style="color: grey;"></div>
+
+        <div id="amountPerServing">Amount per serving</div>
+
+        <div id="caloriesTextandNum">
+            <div id="caloriesText">Calories</div>
+            <input type="text" id="caloriesNum">
+        </div>
+
+        <div id="mediumBorder"></div>
+
+        <div id="calcOptions">
+            <input type="radio" name="option" id="calorieForServing" checked="checked">
+            <label for="calorieForServing" id="calorieForServingLabel">Find out the calories for a certain serving</label>
+            <input type="radio" name="option" id="servingForCalories">
+            <label for="servingForCalories" id="servingForCaloriesLabel">Find out the serving amount to get a certain amount of calories</label>
+        </div>
+
+        <div id="thinBorder" style="margin-top: 10px; border-color: black;"></div>
+
+        <div id="finalOutputs">
+            <div id="finalOutput1"></div>
+            <div id="finalOutput2"></div>
+        </div>
+
+    </div>
+    <script src="script.js">
+    </script>
+</body>
+</html>

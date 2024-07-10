@@ -1,0 +1,93 @@
+#container{
+    border: 2.5px solid black;
+    width: 400px;
+    height:700px;
+    margin: auto;
+    margin-top: 3%;
+}
+
+#nutritionFactsHeader{
+    font-size: 3.5rem;
+    font-weight:900;
+    text-align: center;
+}
+
+#thinBorder{
+    border: 1px solid grey;
+    width: 95%;
+    margin: auto;
+}
+
+#thickBorder{
+    border: 10px solid black;
+    width: 92%;
+    margin: auto;
+    margin-top: 10px;
+}
+
+#servingsPerBag{
+    font-size: 1.5rem;
+    margin-top: 5px;
+}
+
+#servingsSize{
+    display: flex;
+    font-size: 1.5rem;
+    font-weight:900;
+    text-align: center;
+    margin-top: 3px;
+}
+
+#servings{
+    margin-left: 65px;
+}
+#caloriesNum{
+    margin-left: 95px;
+}
+
+#caloriesNum, #servings{
+    border: 1px solid black;
+}
+#amountPerServing{
+    font-weight: 900;
+    font-size:1rem;
+    margin-top:15px;
+}
+
+#caloriesText{
+    font-size:2.3rem;
+    font-weight: 900;
+}
+
+#caloriesTextandNum{
+    display: flex;
+}
+
+
+#servingsPerBag, #servingsSize, #amountPerServing, #caloriesText{
+    margin-left: 5px;
+}
+
+#mediumBorder{
+    border: 4px solid black;
+    width: 95%;
+    margin: auto;
+    margin-top: 5px;
+}
+
+#calcOptions{
+display: flex;
+margin-top: 5px;
+font-size: .8rem;
+text-align: left;
+accent-color: black;
+}
+
+
+#calorieForServingLabel, #servingForCaloriesLabel{
+margin-left: 10px;
+}
+
+body {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
